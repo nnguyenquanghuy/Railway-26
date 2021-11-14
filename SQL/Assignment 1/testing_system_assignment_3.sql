@@ -64,8 +64,7 @@ CREATE TABLE Question (
     CreateDate DATETIME,
     FOREIGN KEY (CategoryID)
         REFERENCES CategoryQuestion (CategoryID),
-    FOREIGN KEY (TypeID)
-        REFERENCES TypeQuestion (TypeID),
+
     FOREIGN KEY (CreatorID)
         REFERENCES `Account` (AccountId)
 );
@@ -143,11 +142,11 @@ VALUES     (1,4,"2021/06/03"),
        (3,8,"2021/07/01"),                         
        (4,7,"2021/04/05"),                         
        (5,6,"2021/01/04"),                         
-       (6,5,"2021/02/06"),                         
-       (7,4,"2021/03/07"),                                                  
-       (9,2,"2021/10/09"),
-		(7,1,"2021/09/08"),
-		(8,5,"2019/12/10");
+       (3,5,"2021/02/06"),                         
+       (5,4,"2021/03/07"),                                                  
+       (4,2,"2021/10/09"),
+		(3,1,"2021/09/08"),
+		(1,5,"2019/12/10");
         
 INSERT INTO 	TypeQuestion 	(TypeName)
 VALUE                           ("Easay"),
@@ -162,14 +161,14 @@ VALUES                                  ("jAVA"),
 										("VIETTEL"),
 										("VIETNAMOBILE");
                                         
-INSERT INTO 		Question	(Content						,CategoryID	,TypeID	,CreatorID	,CreateDate)
-VALUES                      	("Câu hỏi về Lap Trinh JAVA"	,1				,1			,1			,"2021/01/02"),
-								("Câu hỏi về Lap Trinh C"		,2				,2			,2			,"2021/01/02"),
-								("Câu hỏi về Lap Trinh WEB"		,3				,3			,3			,"2021/01/02"),
-								("Câu hỏi về Lap Trinh MY SQL"	,4				,4			,4			,"2021/01/02"),
-								("Câu hỏi về Lap Trinh MOBIPHONE"	,5				,5			,5			,"2021/01/02"),
-								("Câu hỏi về Lap Trinh VIETTEL"	,6				,6			,6			,"2021/01/02"),
-								("Câu hỏi về Lap Trinh VIETNAMOBILE"	,7				,7			,7			,"2021/01/02");
+INSERT INTO 		Question	(Content						,CategoryID	,TypeID	,CreatorID,CreateDate)
+VALUES                      	("Câu hỏi về Lap Trinh JAVA"			,1				,2			,1			,"2021/01/02"),
+								("Câu hỏi về Lap Trinh C"				,2				,3			,2			,"2021/01/02"),
+								("Câu hỏi về Lap Trinh WEB"				,3				,5			,3			,"2021/01/02"),
+								("Câu hỏi về Lap Trinh MY SQL"			,4				,3			,4			,"2021/01/02"),
+								("Câu hỏi về Lap Trinh MOBIPHONE"		,5				,2			,5			,"2021/01/02"),
+								("Câu hỏi về Lap Trinh VIETTEL"			,6				,4			,6			,"2021/01/02"),
+								("Câu hỏi về Lap Trinh VIETNAMOBILE"	,7				,3			,7			,"2021/01/02");
                                 
 INSERT INTO 		Answer	(	Content					,	QuestionID		,isCorrect 	)
 VALUES                      (	"Câu tra loi so 1"		,	1				,1			),
